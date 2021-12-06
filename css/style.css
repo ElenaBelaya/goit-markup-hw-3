@@ -46,7 +46,6 @@ body {
   font-size: 26px;
   font-weight: 700;
   line-height: 1.19;
-  letter-spacing: 0.03em;
   color: var(--accent-color);
   text-decoration: none;
 }
@@ -161,7 +160,8 @@ body {
   margin-bottom: 30px;
 }
 
-.site-nav-link,
+.site-nav .link,
+.site-nav .link-active,
 .contacts-mail,
 .contacts-tel {
   font-weight: 500;
@@ -169,12 +169,12 @@ body {
   letter-spacing: 0.02em;
   text-decoration: none;
 }
-.site-nav-link {
+.site-nav .link {
   color: var(--primary-text-color);
 }
 
-.site-nav-link:hover,
-.site-nav-link:focus {
+.site-nav .link:hover,
+.site-nav .link:focus {
   color: var(--accent-color);
 }
 .contacts-mail,
@@ -188,13 +188,13 @@ body {
 .contacts-tel:focus {
   color: var(--accent-color);
 }
-
+.link-active {
+  color: var(--accent-color);
+}
 .example-name {
   color: var(--text-secondary-color);
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
-  letter-spacing: 0.03em;
 }
 .example-title {
   font-size: 18px;
