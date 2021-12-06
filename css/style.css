@@ -61,7 +61,6 @@ body {
   background-color: var(--background-color);
   padding-top: 200px;
   padding-bottom: 200px;
-  margin-bottom: 94px;
 }
 /*outline: 2px solid red;*/
 .hero-title {
@@ -101,6 +100,11 @@ body {
 }
 .container {
   padding-bottom: 94px;
+  padding-top: 94px;
+  margin-left: 215px;
+  margin-right: 215px;
+}
+.container-dignity {
   padding-top: 94px;
   margin-left: 215px;
   margin-right: 215px;
@@ -191,15 +195,25 @@ body {
 .link-active {
   color: var(--accent-color);
 }
-.example-name {
-  color: var(--text-secondary-color);
-  font-size: 16px;
-  line-height: 1.87;
+
+.example-img {
+  padding-bottom: 20px;
 }
 .example-title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+
+  padding-bottom: 4px;
+  padding-left: 24px;
+}
+.example-name {
+  color: var(--text-secondary-color);
+  font-size: 16px;
+  line-height: 1.87;
+
+  padding-bottom: 20px;
+  padding-left: 24px;
 }
 
 button {
