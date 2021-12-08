@@ -110,6 +110,8 @@ header {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 
   justify-content: space-between;
 }
@@ -118,10 +120,18 @@ header {
   padding-top: 94px;
 }
 .container-dignity {
-  display: flex;
-  flex-wrap: wrap;
   padding-top: 94px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
+.dignity-list {
+  display: flex;
+}
+
+.dignity-list .dignity-item:not(:first-child) {
+  margin-left: 30px;
+}
+
 .container-portfolio {
   margin-bottom: 10px;
 }
@@ -143,7 +153,10 @@ header {
 
 .dignity-item {
   list-style-type: none;
+
+  flex-basis: calc((100% - 90px) / 4);
 }
+
 .dignity-title {
   font-size: 14px;
   line-height: 1.14;
@@ -155,6 +168,7 @@ header {
 }
 .dignity-text {
   line-height: 1.71;
+
   color: var(--text-secondary-color);
 }
 
@@ -163,6 +177,16 @@ header {
 .contacts {
   list-style-type: none;
 }
+.container-list {
+  display: flex;
+}
+.container-list .item:not(:first-child) {
+  margin-left: 30px;
+}
+.container-list .item {
+  text-align: center;
+}
+
 .team-member-img {
   margin-bottom: 30px;
 }
@@ -284,12 +308,21 @@ button {
 }
 
 .btn-list {
+  display: flex;
   margin-bottom: 50px;
+  justify-content: center;
+}
+.btn-list .item:not(:first-child) {
+  margin-left: 8px;
 }
 
 .example-list,
 .btn-list {
   list-style-type: none;
+}
+.example-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /*==========Footer==========*/
