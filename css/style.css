@@ -127,7 +127,7 @@ header {
 }
 
 .dignity-list .dignity-item:not(:first-child) {
-  padding-left: 30px;
+  margin-left: 30px;
 }
 
 .hidden,
@@ -150,8 +150,6 @@ header {
   list-style-type: none;
 
   flex-basis: calc((100% - 90px) / 4);
-
-  outline: 1px solid red;
 }
 
 .dignity-title {
