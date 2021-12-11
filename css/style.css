@@ -75,7 +75,7 @@ header {
   color: #ffffff;
 
   padding-top: 0px;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .btn {
@@ -97,11 +97,10 @@ header {
 .btn:focus {
   background-color: var(--primary-bottom-color);
 }
-/*поменять на .section
-.container {
-  padding-bottom: 94px;
-  padding-top: 94px;
-}*/
+
+.section {
+  padding: 94px 0;
+}
 
 .container {
   width: 1200px;
@@ -110,7 +109,6 @@ header {
   padding-right: 15px;
   padding-left: 15px;
 }
-
 .container-header {
   display: flex;
   align-items: center;
@@ -123,9 +121,6 @@ header {
   display: flex;
   align-items: center;
 }
-/*.container-dignity,
-.container-portfolio,
-.container-footer*/
 
 .container-dignity {
   padding-top: 94px;
@@ -346,7 +341,8 @@ button {
 footer {
   font-family: var(--primary-font), sans-serif;
   background-color: var(--background-color);
-
+}
+.section-footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
