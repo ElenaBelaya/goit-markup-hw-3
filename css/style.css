@@ -64,6 +64,7 @@ header {
   background-color: var(--background-color);
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
 }
 
 .hero-title {
@@ -112,8 +113,7 @@ header {
 .container-header {
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+
   justify-content: space-between;
 }
 
@@ -122,8 +122,69 @@ header {
   align-items: center;
 }
 
-.container-dignity {
-  padding-top: 94px;
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav .link,
+.site-nav .link-active,
+.contacts-mail,
+.contacts-tel {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+.site-nav .link {
+  display: block;
+
+  color: var(--primary-text-color);
+}
+.link-active {
+  display: block;
+
+  color: var(--accent-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+.site-nav .link,
+.site-nav .link-active,
+.contacts-mail,
+.contacts-tel {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.contacts-mail,
+.contacts-tel {
+  display: block;
+
+  color: var(--text-secondary-color);
+}
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts .item + .item {
+  margin-left: 50px;
+}
+.contacts-mail:hover,
+.contacts-mail:focus,
+.contacts-tel:hover,
+.contacts-tel:focus {
+  color: var(--accent-color);
+}
+
+.section-dignity {
+  padding-bottom: 0px;
 }
 .dignity-list {
   display: flex;
@@ -133,20 +194,16 @@ header {
   margin-left: 30px;
 }
 
-.hidden,
-.visible,
 .container-name {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
+  margin-bottom: 50px;
 }
 .hidden {
   display: none;
-}
-.visible,
-.container-name {
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 
 .dignity-item {
@@ -184,9 +241,12 @@ header {
 .container-list .item {
   text-align: center;
 }
-
-.team-member-img {
-  margin-bottom: 30px;
+.section-team {
+  background-color: #f5f4fa;
+}
+.team-member {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team-member-name {
@@ -197,65 +257,6 @@ header {
 .team-member-position {
   font-size: 16px;
   color: var(--text-secondary-color);
-
-  margin-bottom: 30px;
-}
-.site-nav {
-  display: flex;
-  margin-left: 93px;
-}
-
-.site-nav .item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.site-nav .link,
-.site-nav .link-active,
-.contacts-mail,
-.contacts-tel {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-}
-.site-nav .link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  color: var(--primary-text-color);
-}
-.link-active {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  color: var(--accent-color);
-}
-
-.site-nav .link:hover,
-.site-nav .link:focus {
-  color: var(--accent-color);
-}
-.contacts-mail,
-.contacts-tel {
-  display: block;
-
-  color: var(--text-secondary-color);
-}
-.contacts {
-  display: flex;
-  margin-left: auto;
-}
-
-.contacts .item + .item {
-  margin-left: 50px;
-}
-.contacts-mail:hover,
-.contacts-mail:focus,
-.contacts-tel:hover,
-.contacts-tel:focus {
-  color: var(--accent-color);
 }
 
 .example-list {
@@ -264,7 +265,6 @@ header {
 }
 .example-item {
   flex-basis: calc((100%- 30px) / 3);
-  border-bottom: 1px solid #eeeeee;
 }
 
 .example-list .example-item:not(:nth-child(3n + 1)) {
@@ -274,9 +274,10 @@ header {
 .example-list .example-item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 }
-.example-img {
+img {
   display: block;
-  padding-bottom: 20px;
+  max-width: 100%;
+  height: auto;
 }
 .example-title {
   font-size: 18px;
@@ -284,19 +285,18 @@ header {
   letter-spacing: 0.06em;
 
   margin-bottom: 4px;
-  margin-left: 24px;
-  margin-right: 24px;
 }
 .example-name {
   color: var(--text-secondary-color);
   font-size: 16px;
   line-height: 1.87;
-
-  margin-bottom: 20px;
-  margin-left: 24px;
-  margin-right: 24px;
 }
-
+.example-box {
+  padding: 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
 button {
   cursor: pointer;
   border-radius: 4px;
@@ -339,10 +339,7 @@ button {
 
 /*==========Footer==========*/
 footer {
-  font-family: var(--primary-font), sans-serif;
   background-color: var(--background-color);
-}
-.section-footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -372,7 +369,6 @@ footer {
   margin-bottom: 20px;
   display: inline-block;
 }
-.address-map,
-.address-mail {
-  margin-bottom: 9px;
+.address-list .item:not(:first-child) {
+  margin-top: 9px;
 }
